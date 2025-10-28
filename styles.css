@@ -1,0 +1,99 @@
+body {
+    background: #f7f7f7;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+/* Sudoku grid */
+.grid table {
+    border-collapse: collapse;
+    border: 3px solid #333;
+}
+
+.grid input {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.grid td {
+    padding: 0;
+}
+
+/* Thicker borders for 3x3 boxes */
+.grid tr:nth-child(3n) td {
+    border-bottom: 3px solid #333;
+}
+
+.grid td:nth-child(3n) {
+    border-right: 3px solid #333;
+}
+
+/* Buttons */
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+#submit-btn {
+    background-color: #4caf50;
+    color: white;
+}
+#submit-btn:hover {
+    background-color: #45a049;
+}
+
+#restart-btn {
+    background-color: #2196f3;
+    color: white;
+}
+#restart-btn:hover {
+    background-color: #0b7dda;
+}
+
+#solution-btn {
+    background-color: #ff9800;
+    color: white;
+}
+#solution-btn:hover {
+    background-color: #e68900;
+}
+
+/* Popup Notification */
+#popup {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
